@@ -1,20 +1,22 @@
 # Your code goes here!
-class AnagramDectector
+require 'pry'
+class Anagram
 
   attr_accessor :anagram
 
-anagram_words = []
-
-  def initialize(anagram)
-    @anagram = anagram
-  end
-
-  def match (anagram_words)
-anagram_words.each do {|word| word.split("")}
-    if @anagram.include?(word.split("")) == true
-      true
-    else
-      false
-    end
+def initialize(anagram)
+  @anagram = anagram
 end
-  end
+
+def match (anagram_words)
+  no_matches = []
+  anagram_words.select {|word| word.split("").sort == @anagram.split("").sort}
+      #if @anagram.include?(word.split("")) == true
+      #  true
+      #else
+      #no_matches
+   	  #end
+
+ end
+
+ end

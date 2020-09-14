@@ -9,7 +9,6 @@ def initialize(anagram)
 end
 
 def match (anagram_words)
-  binding.pry
   anagram_words.select {|word| word.split("").sort == @anagram.split("").sort}
 end
 
